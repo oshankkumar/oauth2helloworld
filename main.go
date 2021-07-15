@@ -35,8 +35,6 @@ func (a *Application) Oauth2Callback(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	fmt.Printf("%+v\n", token)
-
 	q := make(url.Values)
 	q.Set("access_token", token.AccessToken)
 
